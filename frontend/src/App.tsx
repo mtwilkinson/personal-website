@@ -1,5 +1,5 @@
 import './App.css';
-import { Prisma } from "@prisma/client";
+import { Prisma } from "database/.prisma/client";
 import axios from "axios";
 
 function App() {
