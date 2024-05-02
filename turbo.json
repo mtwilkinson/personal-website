@@ -12,6 +12,9 @@
       "cache": false,
       "persistent": true
     },
+    "frontend#build": {
+      "dependsOn": ["database#build"]
+    },
     "build": {
       "dependsOn": ["^dependencies", "^build"]
     }
