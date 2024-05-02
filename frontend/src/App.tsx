@@ -1,33 +1,44 @@
+
 import './App.css';
-import { Prisma } from "database/.prisma/client";
-import axios from "axios";
+import {Outlet, RouterProvider} from "react-router";
+import {createBrowserRouter} from "react-router-dom";
+import Homepage from "../routes/Homepage.tsx";
+import Example from "../routes/Example.tsx";
+import Navbar from "../components/Navbar.tsx";
+
 
 function App() {
+    const router = createBrowserRouter([
 
-    async function postData() {
+        {
+            path: "/",
+            errorElement: <h2>Something went wrong!</h2>,
+            element: <Root />,
+            children: [
+                {
+                    path: "/",
+                    errorElement: <h2>Something went wrong!</h2>,
+                    element: <Homepage />,
+                },
+                {
+                    path: "/example",
+                    errorElement: <h2>Something went wrong!</h2>,
+                    element: <Example />,
+                },
+            ],
+        },
+    ]);
 
-        const data: Prisma.FeedbackCreateInput = {
-            name: 'Mike',
-            feedback: 'is an SA'
-        }
-        //sends a post request the /api/high-score
-        const res = await axios.post("/api/example", data);
-        if(res.status === 200) {
-            console.log("added feedback");
-        }
+    return <RouterProvider router={router} />;
+
+    function Root() {
+        return (
+            <div className="w-full h-screen flex flex-col">
+                <Navbar />
+                <Outlet />
+            </div>
+        );
     }
-
-    async function getData() {
-        const res = await axios.get("api/example");
-        console.log(res.data);
-    }
-
-    return (
-        <div className="App">
-            <button onClick={postData}>post feedback</button>
-            <button onClick={getData}>get feedback</button>
-        </div>
-    );
 }
 
 export default App;
