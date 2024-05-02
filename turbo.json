@@ -13,7 +13,7 @@
       "persistent": true
     },
     "build": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["^dependencies", "^build"]
     }
   }
 }
