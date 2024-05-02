@@ -1,6 +1,5 @@
 import express from 'express';
 import example from "./routes/example";
-
 const app = express();
 
 app.use(express.json());
