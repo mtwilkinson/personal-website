@@ -9,7 +9,7 @@ export default defineConfig({
     host: "0.0.0.0",
     port: 3000,
     proxy: {
-      "/api": process.env.BACKEND_SOURCE + ":" + process.env.BACKEND_PORT,
+      "/api": "http" + process.env.BACKEND_SOURCE,
     },
   },
   build: {
