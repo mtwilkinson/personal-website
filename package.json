@@ -7,6 +7,7 @@
     "start": "npm run build && npm-run-all --parallel start-Frontend start-Backend",
     "dev": "yarn run dotenv -e .env -- turbo run dev",
     "deploy": "turbo run deploy",
+    "build:database": "cd database && yarn run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "turbo run build --force"
   },
