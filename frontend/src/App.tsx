@@ -1,10 +1,9 @@
-
 import './App.css';
 import {Outlet, RouterProvider} from "react-router";
 import {createBrowserRouter} from "react-router-dom";
-import Homepage from "../routes/Homepage.tsx";
-import Example from "../routes/Example.tsx";
-import Navbar from "../components/Navbar.tsx";
+import Homepage from "./routes/Homepage.tsx";
+import Example from "./routes/Example.tsx";
+import Navbar from "./components/Navbar.tsx";
 
 
 function App() {
@@ -33,7 +32,7 @@ function App() {
 
     function Root() {
         return (
-            <div className="w-full h-screen flex flex-col">
+            <div className="w-screen h-screen flex flex-col bg-amber-200 items-center">
                 <Navbar />
                 <Outlet />
             </div>
