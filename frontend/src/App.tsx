@@ -32,7 +32,7 @@ function App() {
 
     function Root() {
         return (
-            <div className="w-screen h-screen flex flex-col bg-amber-200 items-center">
+            <div className="w-screen h-screen flex flex-col bg-blue-50 items-center">
                 <Navbar />
                 <Outlet />
             </div>
