@@ -19,3 +19,15 @@ model Feedback {
   name     String
   feedback String
 }
+
+model Contact {
+  id       Int    @id @default(autoincrement())
+  name     String
+  phone    String
+  email    String
+  job      String
+  income   Int
+  location String
+  details  String
+  date     String
+}

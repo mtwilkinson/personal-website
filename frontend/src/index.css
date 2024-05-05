@@ -26,3 +26,7 @@ p {
 .navButton {
   @apply text-white text-lg hover:text-black hover:bg-blue-300 hover:border-blue-300 px-6 h-12 flex items-center border-b-4 ;
 }
+
+input {
+  @apply p-2 outline-1 outline outline-blue-700 rounded focus:outline-2;
+}

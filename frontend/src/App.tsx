@@ -5,6 +5,7 @@ import Homepage from "./routes/Homepage.tsx";
 import Example from "./routes/Example.tsx";
 import Navbar from "./components/Navbar.tsx";
 import Projects from "./routes/Projects.tsx";
+import Contact from "./routes/Contact.tsx";
 
 
 function App() {
@@ -29,6 +30,11 @@ function App() {
                     path: "/projects",
                     errorElement: <h2>Something went wrong!</h2>,
                     element: <Projects />,
+                },
+                {
+                    path: "/contact",
+                    errorElement: <h2>Something went wrong!</h2>,
+                    element: <Contact />,
                 },
             ],
         },
