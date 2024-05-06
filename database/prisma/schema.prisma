@@ -21,7 +21,7 @@ model Feedback {
 }
 
 model Contact {
-  id       Int    @id @default(autoincrement())
+  id       Int      @id @default(autoincrement())
   name     String
   phone    String
   email    String
@@ -29,5 +29,5 @@ model Contact {
   income   Int
   location String
   details  String
-  date     String
+  date     DateTime
 }

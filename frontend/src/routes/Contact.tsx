@@ -1,12 +1,25 @@
 import photo from "../assets/temporary_photo.jpg";
 import {useState} from "react";
 import { Prisma } from "database/.prisma/client";
+import axios from "axios";
 
 function Contact() {
-    const emptyContact: Prisma.ContactCreateInput = {name: "", phone: "", email: "", job: "", income: 0, location: "", details: "", date: ""};
+    const emptyContact: Prisma.ContactCreateInput = {name: "", phone: "", email: "", job: "", income: 0, location: "", details: "", date: new Date()};
     const [contact, setContact] = useState<Prisma.ContactCreateInput>(emptyContact);
 
-    function handleSubmit() {
+    async function handleSubmit() {
+        if (contact.email !== "") {
+            const data = contact;
+            data.date = new Date();
+            const res = await axios.post("/api/contact", data)
+            if (res.status === 200) {
+                alert("The form has been submitted. Mike will contact you shortly");
+            } else {
+                alert("the form failed to submit");
+            }
+        } else {
+            alert("please enter your email before submitting.");
+        }
         console.log(contact);
         clear();
     }

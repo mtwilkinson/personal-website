@@ -7,6 +7,7 @@ function Navbar() {
             <NavbarButton href={"/"} name={"Homepage"} />
             <NavbarButton href={"/projects"} name={"Projects"} />
             <NavbarButton href={"/contact"} name={"Contact Michael"} />
+            <NavbarButton href={"/view-contacts"} name={"View Contacts"} />
             <NavbarButton href={"/example"} name={"Example"} />
         </div>
     );

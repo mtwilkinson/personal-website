@@ -6,6 +6,7 @@ import Example from "./routes/Example.tsx";
 import Navbar from "./components/Navbar.tsx";
 import Projects from "./routes/Projects.tsx";
 import Contact from "./routes/Contact.tsx";
+import ViewContacts from "./routes/ViewContacts.tsx";
 
 
 function App() {
@@ -35,6 +36,11 @@ function App() {
                     path: "/contact",
                     errorElement: <h2>Something went wrong!</h2>,
                     element: <Contact />,
+                },
+                {
+                    path: "/view-contacts",
+                    errorElement: <h2>Something went wrong!</h2>,
+                    element: <ViewContacts />,
                 },
             ],
         },
