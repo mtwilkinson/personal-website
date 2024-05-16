@@ -52,7 +52,7 @@ function Contact() {
                 <tbody className="overflow-y-auto">
                 {/* Map through the records and create a row for each record */}
                 {contacts.map((c) => (
-                    <ContactRow name={c.name} phone={c.phone} email={c.email} job={c.job} income={c.income} location={c.location} details={c.details} />
+                    <ContactRow name={c.name} phone={c.email} email={c.phone} job={c.job} income={c.income} location={c.location} details={c.details} />
                 ))}
                 </tbody>
             </table>
